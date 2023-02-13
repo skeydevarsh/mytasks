@@ -139,7 +139,7 @@ function showSlides(n) {
 window.onload = function () {
   setInterval(function () {
     plusSlides(1);
-  }, 5000);
+  }, 2500);
 };
 
 // scroll to top
