@@ -1,0 +1,63 @@
+<html>
+<title>Testimonials</title>
+
+<head>
+  <style>
+    .containert {
+      border: 2px solid #ccc;
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0
+    }
+
+    .containert::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .containert img {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+
+    .containert span {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+    @media (max-width: 500px) {
+      .containert {
+        text-align: center;
+      }
+
+      .containert img {
+        margin: auto;
+        float: none;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Testimonials</h2>
+
+  <div class="containert">
+    <img src="./r.png" alt="Avatar" style="width:100px;">
+    <p><span>Devarsh Joshi</span></p>
+    <p>An intern at Shubhkey.</p>
+  </div>
+
+  <div class="containert">
+    <img src="./Nector logo.png" alt="Avatar" style="width: 100px;">
+    <p><span>Nector Tech</span>A tech Company.</p>
+    <p>Thanks to First one, we could deliver perfect tech solutions to our.</p>
+  </div>
+
+</body>
+
+</html>

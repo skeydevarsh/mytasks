@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+
+    <head>
+      <title>Sneakeround</title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="description" content=" website">
+      <meta name="keywords" content="nike, adidas, reebok, tesla, nector, web
+        dev, web development, development, software development, app
+        development, devOps,astroworld, thrasher, Shubhkey, Devarsh, Joshi">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="content" content="First one website.">
+    </head>
+
+    <body>
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top">⬆︎</button>
+      <header class="task">
+        <div>
+          <h2 style="background-color: black;">New Task</h2>
+        </div>
+      </header>
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#Gallery">Portfolio Gallery</a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">More ▾
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#services">Services</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="appast">
+        <div class="apple1">
+          <div class="apple2">
+            <img src="./unc.jpeg" alt="apple" class="appleimg">
+            <div class="applest">
+              <h3>Sneak around @ Sneakeround</h3>
+              <p>The all-new unc blue only at our marketplace 'cause we gotcha</p>
+              <p>Find all the latest sneakers on our website at the best rate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="astro1">
+          <div class="apple2">
+            <img src="./astroworld.jpeg" alt="astro" class="appleimg">
+            <div class="applest">
+              <h3>Sneakeround</h3>
+              <p>We don't just resell hot kicks, we help you make apps, </p>
+              <p>
+                and softwares related to hot kicks too</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Services -->
+      <section id="services">
+        <h1 class="headh1">Services we provide</h1>
+        <div class="teamdiv">
+          <div class="servcards">
+            <img src="./web.jpeg" alt="astro" class="teamimg">
+            <div class="boxed">
+              <h3>Web Development for sneaker services</h3>
+              <button id="myButtons">Sneakeround</button>
+              <div id="myModals" class="modals">
+                <div class="modals-content">
+                  <span class="off">&times;</span>
+                  <p>Web developing a platform for sneakerheads.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="servcards">
+            <img src="./app.jpeg" alt="astro" class="teamimg">
+            <div class="boxed">
+              <h3>App Development for sneaker services</h3>
+              <button id="devBtn" class="devBtn">Sneaking </button>
+              <div id="devModal" class="modaled">
+                <div class="modaled-content">
+                  <span class="off">&times;</span>
+                  <p>Web developing a platform for sneakerheads.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="servcards">
+            <img src="./software.jpeg" alt="astro" class="teamimg">
+            <div class="boxed">
+              <h3>Software Development for sneaker services</h3>
+              <button id="myButtons">Around </button>
+              <div id="myModals" class="modals">
+                <div class="modals-content">
+                  <span class="off">&times;</span>
+                  <p>Web developing a platform for sneakerheads.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- blogs -->
+      <section id="blogs">
+        <h1 class="headh1">Blogs</h1>
+        <div class="blogs">
+          <h3><a href="./blog 1.html" class="blog">Blog 1</a>
+            <a href="#blog 2" class="blog">Blog 2</a>
+          </h3>
+        </div>
+      </section>
+
+
+
+      <!-- testimonials -->
+
+      <h1 class="headh1">Testimonials</h1>
+      <div class="slideshow-container>">
+        <div class="testi">
+          <img src="r.png" alt="dev" width="90px">
+          <span>Devarsh Joshi</span>
+        </div>
+        <div class="testi">
+          <img src="r.png" alt="dev" width="90px">
+          <span>John Doe</span>
+        </div>
+        <div class="testi">
+          <img src="r.png" alt="dev" width="90px">
+          <p>John Dove</p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h1 class="headh1">Contact Form</h1>
+
+        <div class="container">
+          <form name="myForm" onsubmit="return validateForm()" method="post"
+            action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname"
+              placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname"
+              placeholder="Your last name..">
+
+            <label>Email</label>
+            <input type="email" id="email" name="email"
+              placeholder="Your email..">
+
+            <label for="country">What is your issue/query?</label>
+            <select id="country" name="country">
+              <option value="none" selected disabled hidden>Choose One</option>
+              <option value="Earth">Product related</option>
+              <option value="Mercury">Pricing related</option>
+              <option value="Mars">Other</option>
+            </select>
+
+            <label for="subject">How may we help you?</label>
+            <textarea class="subject" name="subject"
+              placeholder="Write something.."></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </section>
+
+
+      <!-- portfolio items -->
+
+      <!-- <section class="portf" id="portfolio">
+     <h1 class="headh1">Portfolio Items</h1>
+     <div id="slideshow">
+      <div id="slidebox">
+        <div id="slideing">
+          <img src="taxi.jpeg" alt="" class="slideing">
+          <img src="trav1.jpeg" alt="" class="slideing">
+          <img src="trav2.jpeg" alt="" class="slideing">
+          <img src="unc.jpeg" alt="" class="slideing">
+          <img src="bluebred.jpeg" alt="" class="slideing">
+          <img src="patentbred.jpeg" alt="" class="slideing">
+          <img src="mocha.jpeg" alt="" class="slideing">
+          <img src="george.jpeg" alt="" class="slideing">
+          <img src="dior.jpeg" alt="" class="slideing">
+        </div>
+      </div>
+     </div>
+     </section> -->
+      <!-- lightbox -->
+
+      <section class="portf" id="Gallery">
+        <h1 style="text-align: center;">Gallery</h1>
+        <div class="row">
+          <div class="column">
+            <img src="patentbred.jpeg" onclick="openModal();currentSlide(1)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="royale.jpeg" onclick="openModal();currentSlide(2)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="trav1.jpeg" onclick="openModal();currentSlide(3)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="trav2.jpeg" onclick="openModal();currentSlide(4)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="trav3.jpeg" onclick="openModal();currentSlide(5)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="taxi.jpeg" onclick="openModal();currentSlide(6)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="george.jpeg" onclick="openModal();currentSlide(7)"
+              class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="dior.jpeg" onclick="openModal();currentSlide(8)"
+              class="hover-shadow">
+          </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 8</div>
+              <img src="patentbredd.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 8</div>
+              <img src="royalee.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 8</div>
+              <img src="travv1.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 8</div>
+              <img src="travv2.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 8</div>
+              <img src="trav3.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">6 / 8</div>
+              <img src="taxii.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">7 / 8</div>
+              <img src="george.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">8 / 8</div>
+              <img src="diorr.jpeg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+              <img class="demo" src="patentbred.jpeg"
+                onclick="currentSlide(1)" alt="Patent Bred Red High">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="royale.jpeg" onclick="currentSlide(2)"
+                alt="Hyper Royale">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="trav1.jpeg" onclick="currentSlide(3)"
+                alt="Travis Scott Mocha High">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="trav2.jpeg" onclick="currentSlide(4)"
+                alt="Travis Scott x Fragement low">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="trav3.jpeg" onclick="currentSlide(5)"
+                alt="Travis Scott Phantom Black">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="taxi.jpeg" onclick="currentSlide(6)"
+                alt="Yellow Taxi High">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="george.jpeg" onclick="currentSlide(7)"
+                alt="George Green High">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="dior.jpeg" onclick="currentSlide(8)"
+                alt="Dior x Jordan 1 High">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- lightbox end -->
+
+      <!-- map -->
+      <section id="map">
+        <h1 class="headh1">Find Us Here</h1>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3040643943327!2d72.52210691495684!3d23.01260532247528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85310732d9ad%3A0x40d8c324e10e363a!2sShubhKey%20Infotech!5e0!3m2!1sen!2sin!4v1675758589209!5m2!1sen!2sin"
+            width="500" height="450" style="margin: 20px;;" allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h1 class="h2">Come visit us.</h1>
+
+      </section>
+      <div class="footer">
+        @Copyright <i> Created by <u>Devarsh Joshi</u></i>
+      </div>
+      <script src="script.js"></script>
+    </body>
+
+
+  </html>
