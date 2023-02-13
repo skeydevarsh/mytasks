@@ -93,20 +93,6 @@ function validateForm() {
   };
 };
 
-// sticky header
-window.onscroll = function () { myFunct() };
-
-// var headers = document.getElementById("myHeader");
-// var sticky = headers.offsetTop;
-
-function myFunct() {
-  if (window.pageYOffset > sticky) {
-    headers.classList.add("sticky");
-  } else {
-    headers.classList.remove("sticky");
-  }
-}
-
 // testimonial slider
 
 var slideIndex = 1;
