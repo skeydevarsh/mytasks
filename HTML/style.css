@@ -72,10 +72,6 @@ li :hover {
   color: purple;
 }
 
-.blog {
-  background-color: inherit;
-}
-
 .testimg {
   width: 100px;
 }
@@ -91,6 +87,7 @@ li :hover {
 
 .teamdiv {
   display: flex;
+  padding-top: 10px;
 }
 
 .cards {
@@ -134,19 +131,53 @@ li :hover {
   height: 200px;
 }
 
-.task {
-  text-align: center;
-  background-color: black;
-  color: aliceblue;
-  margin: 0px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
 .cardimg {
   height: 70%;
   width: 100%;
 }
+
+
+.dropbtn {
+  background-color: #615f5f;
+  color: wheat;
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: red;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: #615f5f;
+  right: 25px;
+  flex-direction: column;
+}
+
+.dropdown-show {
+  display: flex;
+}
+
+.dropdown-content a {
+  color: wheat;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* .dropdown-content a:hover {
+   background-color: red; 
+}*/
 
 .navbar a {
   display: block;
@@ -159,10 +190,14 @@ li :hover {
   overflow: hidden;
   background-color: #615f5f;
   margin: 0px;
-  padding-top: 20px;
+  padding-top: 0px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.navbar :hover {
+.navbar a:hover,
+.navbar button:hover {
   background-color: red;
 }
 
@@ -176,7 +211,7 @@ li :hover {
 }
 
 .dropdown {
-  float: left;
+  /* float: right; */
   overflow: hidden;
 }
 
@@ -481,45 +516,6 @@ img.hover-shadow {
   padding-top: 20px;
 }
 
-.dropbtn {
-  background-color: #615f5f;
-  color: wheat;
-  padding: 13px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover {
-  background-color: red;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: wheat;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: red;
-}
-
 .show {
   display: block;
 }
@@ -545,26 +541,96 @@ img.hover-shadow {
 }
 
 /* modal */
-.modaled-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.modaled {
+.modals {
   display: none;
+  /* Hidden by default */
   position: fixed;
+  /* Stay in place */
   z-index: 1;
+  /* Sit on top */
   padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  /* Full height */
   overflow: auto;
   background-color: rgb(0, 0, 0);
+  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modals-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* The Close Button */
+.off {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.off:hover,
+.off:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modals-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modals-body {
+  padding: 2px 16px;
+}
+
+.modals-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
 }
 
 /* slider testimonials */
@@ -579,7 +645,19 @@ img.hover-shadow {
   text-align: center;
 }
 
+.car {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
 .testi::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.car::after {
   content: "";
   clear: both;
   display: table;
@@ -588,11 +666,24 @@ img.hover-shadow {
 .testi img {
   float: left;
   margin-right: 20px;
-  border-radius: 50%;
+  max-height: 100px;
+  width: auto;
+}
+
+.car img {
+  float: left;
+  margin-right: 20px;
+  max-height: 100px;
+  width: auto;
 }
 
 .testi span {
-  font-size: 20px;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+.car p {
+  font-size: 50px;
   margin-right: 20px;
 }
 
@@ -612,7 +703,15 @@ img.hover-shadow {
 }
 
 .next {
-  position: absolute;
+  position: relative;
+  float: right;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  position: relative;
+  float: left;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -642,7 +741,7 @@ img.hover-shadow {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #e40f0f;
 }
 
 /* scroll back button */
@@ -668,19 +767,21 @@ img.hover-shadow {
 
 /* search bar */
 #searchbar {
-  margin-left: 15%;
+  margin-left: 20%;
   padding: 15px;
   border-radius: 10px;
+  margin-right: 0;
+  width: 70%;
 }
 
-input[type=text] {
+#searchbar input[type=text] {
   width: 30%;
   -webkit-transition: width 0.15s ease-in-out;
   transition: width 0.15s ease-in-out;
 }
 
 
-input[type=text]:focus {
+#searchbar input[type=text]:focus {
   width: 70%;
 }
 
@@ -703,15 +804,16 @@ input[type=text]:focus {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 50%;
+  width: 75%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  padding-bottom: 10px;
+  font-size: 20px;
+  transition: 1s;
+  padding-bottom: 30px;
   padding-top: 10px;
   position: relative;
+  margin-left: 10px;
 }
 
 .active,
@@ -720,10 +822,11 @@ input[type=text]:focus {
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 18px;
   display: none;
   background-color: white;
   overflow: hidden;
+  font-size: 20px;
 }
 
 .accordions {
@@ -753,4 +856,91 @@ input[type=text]:focus {
   background-color: white;
   overflow: hidden;
   font-size: 20px;
+}
+
+/* team member tabbed interface*/
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* carousel */
+.dots-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+.dots {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dots:hover {
+  background-color: #e40f0f;
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* animations */
+#greeting {
+  transition: opacity 1s;
+  font-size: 23px;
+  margin: 0%;
+  padding: 0%;
+}
+
+#greeting1 {
+  transition: opacity 1s;
+  position: relative;
+  font-size: large;
+  top: 0px;
+  margin: 0%;
+  padding: auto;
+}
+
+.task {
+  text-align: center;
+  background-color: #615f5f;
+  color: aliceblue;
+  padding: 0%;
+  margin: 0;
 }
