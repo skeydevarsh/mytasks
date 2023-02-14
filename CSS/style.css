@@ -51,6 +51,8 @@ body {
 .headh1 {
   background-color: rgb(79, 7, 248);
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 ul {
@@ -340,8 +342,8 @@ input[type=submit]:hover {
 
 /* lightbox gallery */
 
-.portf {
-  background-color: rgb(228, 237, 237);
+* {
+  box-sizing: border-box;
 }
 
 .row>.column {
@@ -356,9 +358,7 @@ input[type=submit]:hover {
 
 .column {
   float: left;
-  width: 20%;
-  border-radius: 10px;
-  margin-left: 45px;
+  width: 25%;
 }
 
 .modal {
@@ -379,7 +379,7 @@ input[type=submit]:hover {
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
 }
 
@@ -401,6 +401,10 @@ input[type=submit]:hover {
 
 .mySlides {
   display: none;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 .prev,
@@ -438,6 +442,10 @@ input[type=submit]:hover {
   top: 0;
 }
 
+img {
+  margin-bottom: -4px;
+}
+
 .caption-container {
   text-align: center;
   background-color: black;
@@ -445,7 +453,7 @@ input[type=submit]:hover {
   color: white;
 }
 
-img.demo {
+.demo {
   opacity: 0.6;
 }
 
@@ -656,4 +664,93 @@ img.hover-shadow {
 
 #myBtn:hover {
   background-color: #555;
+}
+
+/* search bar */
+#searchbar {
+  margin-left: 15%;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+  width: 30%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+}
+
+
+input[type=text]:focus {
+  width: 70%;
+}
+
+#list {
+  font-size: 25px;
+  margin-left: 90px;
+}
+
+.shoes {
+  display: list-item;
+}
+
+#list {
+  text-decoration: none;
+}
+
+/* accordion */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.accordions {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.active,
+.accordions:hover {
+  background-color: #ccc;
+}
+
+.panels {
+  padding: 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  font-size: 20px;
 }

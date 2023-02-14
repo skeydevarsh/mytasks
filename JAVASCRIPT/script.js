@@ -1,3 +1,19 @@
+// Accordion
+var acc = document.getElementsByClassName("accordions");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
 // dropdown
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -32,42 +48,43 @@ for (i = 0; i < acc.length; i++) {
 }
 
 // portfolio lightbox
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
 
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
+// function openModal() {
+//   document.getElementById("myModal").style.display = "block";
+// }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+// function closeModal() {
+//   document.getElementById("myModal").style.display = "none";
+// }
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   var captionText = document.getElementById("caption");
+//   if (n > slides.length) { slideIndex = 1 }
+//   if (n < 1) { slideIndex = slides.length }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].className += " active";
+//   captionText.innerHTML = dots[slideIndex - 1].alt;
+// }
 
 // validation
 function validateForm() {
@@ -144,3 +161,19 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// search bar
+function search_shoes() {
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('shoes');
+
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "list-item";
+    }
+  }
+}
+
