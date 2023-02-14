@@ -687,8 +687,8 @@ img.hover-shadow {
   margin-right: 20px;
 }
 
-.prev,
-.next {
+.previ,
+.nexti {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -702,33 +702,50 @@ img.hover-shadow {
   user-select: none;
 }
 
-.next {
+.nexti {
   position: relative;
   float: right;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-.prev {
+.previ {
   position: relative;
   float: left;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover,
-.next:hover {
+.previ:hover,
+.nexti:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
-.dot-container {
+.dots-container {
   text-align: center;
   padding: 20px;
   background: #ddd;
 }
 
-.dot {
+.dotee-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+.dots {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dotee {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -740,7 +757,8 @@ img.hover-shadow {
 }
 
 .active,
-.dot:hover {
+.dots:hover,
+.dotee:hover {
   background-color: #e40f0f;
 }
 

@@ -157,13 +157,13 @@
           <img src="r.png" alt="dev" width="90px">
           <span>John Dove</span>
         </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <a class="previ" onclick="plusSlidee(-1)">❮</a>
+        <a class="nexti" onclick="plusSlidee(1)">❯</a>
       </div>
-      <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+      <div class="dotee-container">
+        <span class="dotee" onclick="currentSlidee(1)"></span>
+        <span class="dotee" onclick="currentSlidee(2)"></span>
+        <span class="dotee" onclick="currentSlidee(3)"></span>
       </div>
 
       <!-- Team -->
@@ -270,10 +270,10 @@
             <img src="./dior.jpeg" alt="dev" width="90px">
             <p>Designer Collaborations</p>
           </div>
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
+          <a class="previ" onclick="plusSlide(-1)">❮</a>
+          <a class="nexti" onclick="plusSlide(1)">❯</a>
         </div>
-        <div class="dot-container">
+        <div class="dots-container">
           <span class="dots" onclick="currentSlide(1)"></span>
           <span class="dots" onclick="currentSlide(2)"></span>
           <span class="dots" onclick="currentSlide(3)"></span>
@@ -286,7 +286,7 @@
       <div class="row">
         <div class="column">
           <img src="taxi.jpeg" style="width:100%"
-            onclick="openModal();currentSlide(1)"
+            onclick="openModal();currentSlides(1)"
             class="hover-shadow cursor">
         </div>
         <div class="column">
@@ -362,43 +362,6 @@
           </div>
         </div>
       </div>
-      <script>function openModal() {
-        document.getElementById("myModal").style.display = "block";
-      }
-      
-      function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-      }
-      
-      var slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-      }
-      </script>
       <!-- lightbox end -->
 
 

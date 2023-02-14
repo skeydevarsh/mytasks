@@ -1,3 +1,8 @@
+// plusslide in carousel portf (previ,nexti)and testimonial
+// plusSlides in lightbox Gallery 
+
+
+
 // portfolio lightbox
 
 function openModal() {
@@ -8,33 +13,33 @@ function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+var slidesIndex = 1;
+showSlides(slidesIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(slidesIndex += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlides(n) {
+  showSlides(slidesIndex = n);
 }
 
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  var dotes = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  if (n > slides.length) { slidesIndex = 1 }
+  if (n < 1) { slidesIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < dotes.length; i++) {
+    dotes[i].className = dotes[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+  slides[slidesIndex - 1].style.display = "block";
+  dotes[slidesIndex - 1].className += " active";
+  captionText.innerHTML = dotes[slidesIndex - 1].alt;
 }
 
 // Accordion
@@ -113,32 +118,32 @@ function validateForm() {
 
 // testimonial slider
 
-var slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+var slideIndee = 1;
+showSlidee(slideIndee);
+function plusSlidee(n) {
+  showSlidee((slideIndee += n));
 }
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function currentSlidee(n) {
+  showSlidee((slideIndee = n));
 }
-function showSlides(n) {
+function showSlidee(n) {
   var i;
-  var slides = document.getElementsByClassName("testi");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+  var slidee = document.getElementsByClassName("testi");
+  var dotee = document.getElementsByClassName("dotee");
+  if (n > slidee.length) {
+    slideIndee = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndee = slidee.length;
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (i = 0; i < slidee.length; i++) {
+    slidee[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < dotee.length; i++) {
+    dotee[i].className = dotee[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slidee[slideIndee - 1].style.display = "block";
+  dotee[slideIndee - 1].className += " active";
 }
 window.onload = function () {
   setInterval(function () {
@@ -186,17 +191,17 @@ showSlide();
 function showSlide() {
   let i;
   let slide = document.getElementsByClassName("car");
-  let dot = document.getElementsByClassName("dots");
+  let dots = document.getElementsByClassName("dots");
   for (i = 0; i < slide.length; i++) {
     slide[i].style.display = "none";
   }
   slideIndice++;
   if (slideIndice > slide.length) { slideIndice = 1 }
-  for (i = 0; i < dot.length; i++) {
-    dot[i].className = dot[i].className.replace(" active", "");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
   slide[slideIndice - 1].style.display = "block";
-  dot[slideIndice - 1].className += " active";
+  dots[slideIndice - 1].className += " active";
   setTimeout(showSlide, 2000); // Change image every 2 seconds
 }
 
