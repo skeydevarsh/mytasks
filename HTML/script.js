@@ -2,7 +2,6 @@
 // plusSlides in lightbox Gallery 
 
 
-
 // portfolio lightbox
 
 function openModal() {
@@ -295,10 +294,10 @@ function topFunction() {
 
 // hamburger menu
 function hamFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
   } else {
-    x.style.display = "block";
+    x.className = "navbar";
   }
 }
